@@ -151,9 +151,7 @@ main (主分支，保护分支)
   ↓
 dev (开发集成分支)
   ↓
-feature-wbs (WBS功能分支)
-feature-summary (总结报告分支)
-feature-wanghanyin (组员工作分支)
+feature-xxx(各个功能分支)
 ```
 
 **分支说明**：
@@ -184,12 +182,18 @@ feature-wanghanyin (组员工作分支)
 4. 配置管理员审核后合并到dev
 5. 阶段性完成后，由项目经理合并dev到main
 
-**主分支保护规则**：
+**主分支保护规则**：（未实际应用）
 - main分支设置为保护分支
 - 禁止直接push到main
 - 必须通过Pull Request合并
 - 需要至少一位审核者批准
 
+**实际合并流程**：
+1. 成员在各自的feature分支完成工作后提交
+2. 将feature分支推送到远程仓库
+3. 成员大致审核后合并到dev
+5. 阶段性完成后，一起合并dev到master
+6. 最后创建main分支，并更新实验报告
 ---
 
 ## 五、冲突制造、识别与解决过程
@@ -295,41 +299,35 @@ feature-wanghanyin (组员工作分支)
 
 ## 七、附录
 
-### 7.1 提交记录
+### 7.1 提交记录 与 分支历史
 
-| 序号 | 提交哈希 | 提交信息 | 提交人 |
-|---|---|---|---|
-| 1 | 1155a29 | init: 初始化项目结构 | wangqixiao |
-| 2 | ef911c4 | feat: 完成WBS分解和项目启动说明 | wangqixiao |
-| 3 | 7a34704 | feat: 完成简化进度计划 | wangqixiao |
-| 4 | 5dcf457 | feat: 完成配置管理文档 | wangqixiao |
-| 5 | 65fb397 | feat: 创建冲突示例文件 | wangqixiao |
-| 6 | cd4bc34 | fix: 主张直接合并到main | wangqixiao |
-| 7 | 083ff79 | feat: 完成总结报告 | wangqixiao |
-| 8 | 73c58cb | fix: 主张先经过dev再合并到main | wangqixiao |
-| 9 | 025eab2 | merge: 解决冲突，决定先经过dev再合并到main | wangqixiao |
-| 10 | 4b04284 | docs: 添加团队协作指南 | wangqixiao |
-| 11 | 9b05a2c | docs: 更新团队协作指南，修改组员信息 | wangqixiao |
+*   7a8f114 合并了wanghanyin feature上的修改，其中，实验报告部分保留master原始版本 wanghanyin
+|\  
+| * d73b34c modified docs/05 wanghanyin
+| * 999d469 更改文档内本人姓名, 并为进度计划添加所对应的wbs条目 wanghanyin
+| * 729c9b7 精简并美化了02-wbs.md wanghanyin
+| *   deb7b50 在dev分支合并了,上次提交时人为制造的两个feature分支的冲突 wanghanyin
+| |\  
+| | * dc1e91e 将conflict.md第27行修改为不同内容 wanghanyin
+| * | 97b4dcd 人为制造冲突是,这我在行啊 wanghanyin
+| |/  
+* | 2610156 docs: 完善实验报告，添加完整内容 wangqixiao
+* | 9b05a2c docs: 更新团队协作指南，修改组员信息 wangqixiao
+* | 4b04284 docs: 添加团队协作指南 wangqixiao
+|/  
+*   025eab2 merge: 解决冲突，决定先经过dev再合并到main wangqixiao
+|\  
+| * 73c58cb fix: 主张先经过dev再合并到main wangqixiao
+| * 083ff79 feat: 完成总结报告 wangqixiao
+* | cd4bc34 fix: 主张直接合并到main wangqixiao
+|/  
+* 65fb397 feat: 创建冲突示例文件 wangqixiao
+* 5dcf457 feat: 完成配置管理文档 wangqixiao
+* 7a34704 feat: 完成简化进度计划 wangqixiao
+* ef911c4 feat: 完成WBS分解和项目启动说明 wangqixiao
+* 1155a29 init: 初始化项目结构 wangqixiao
 
-### 7.2 分支历史
-
-```
-*   9b05a2c (HEAD -> master, origin/master) docs: 更新团队协作指南
-*   4b04284 docs: 添加团队协作指南
-*   025eab2 merge: 解决冲突
-|\
-| * 73c58cb (feature-summary) fix: 主张先经过dev
-| * 083ff79 feat: 完成总结报告
-* | cd4bc34 fix: 主张直接合并到main
-|/
-* 65fb397 (feature-wbs) feat: 创建冲突示例文件
-* 5dcf457 feat: 完成配置管理文档
-* 7a34704 feat: 完成简化进度计划
-* ef911c4 feat: 完成WBS分解和项目启动说明
-* 1155a29 init: 初始化项目结构
-```
-
-### 7.3 项目目录结构
+### 7.2 项目目录结构
 
 ```
 SPM-Project/
