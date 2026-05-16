@@ -132,5 +132,9 @@
 ### 7.2 分支历史
 - main：主分支
 - dev：开发分支
+- master: 旧的主分支
 - feature-wbs：WBS功能分支
 - feature-summary：总结报告分支
+- feature/wanghanyin-wbs-schedule: wanghanyin 创建的wbs&schedule分支。注：其它未标注姓名的分支为组长创建的，除了main。
+- feature/wanghanyin-conflict: 为模拟冲突和合并设置的测试分支。
+ 
