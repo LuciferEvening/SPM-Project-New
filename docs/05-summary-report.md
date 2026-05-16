@@ -161,7 +161,7 @@ feature-xxx(各个功能分支)
 
 ### 4.3 提交命名规范
 
-采用约定式提交（Conventional Commits）：（至少开始时确实是这样打算的，但是后来逐渐就忘记了）
+采用约定式提交（Conventional Commits）：
 
 | 类型 | 说明 | 示例 |
 |---|---|---|
