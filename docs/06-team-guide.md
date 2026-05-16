@@ -1,6 +1,6 @@
 # 06 团队协作指南
 
-## 面向组员：rookiedude
+## 面向组员：王汉寅（wanghanyin）
 
 ### 一、准备工作
 
@@ -11,7 +11,7 @@
 #### 2. 配置 Git 用户信息
 打开终端，执行以下命令：
 ```bash
-git config --global user.name "rookiedude"
+git config --global user.name "wanghanyin"
 git config --global user.email "你的邮箱地址"
 ```
 
@@ -27,7 +27,7 @@ cd SPM-Project-New
 
 #### 2. 创建你的工作分支
 ```bash
-git checkout -b feature-rookiedude
+git checkout -b feature-wanghanyin
 ```
 
 ### 三、开始工作
@@ -52,7 +52,7 @@ git add docs/02-wbs.md docs/03-schedule.md
 git commit -m "feat: 完善WBS三级分解"
 
 # 推送到远程仓库
-git push origin feature-rookiedude
+git push origin feature-wanghanyin
 ```
 
 ### 四、协作流程
@@ -76,7 +76,7 @@ git push origin feature-rookiedude
 ```bash
 git checkout dev
 git pull origin dev
-git checkout feature-rookiedude
+git checkout feature-wanghanyin
 git merge dev
 ```
 
@@ -93,7 +93,7 @@ git merge dev
 
 2. **忘记配置用户名**：
    ```bash
-   git config user.name "rookiedude"
+   git config user.name "wanghanyin"
    ```
 
 ### 八、任务清单
@@ -108,6 +108,6 @@ git merge dev
 ---
 
 **项目经理：王其潇（wangqixiao）**
-**协作成员：rookiedude**
+**协作成员：王汉寅（wanghanyin）**
 
 完成任务后通知项目经理合并到 dev 分支！
